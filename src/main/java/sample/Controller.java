@@ -9,7 +9,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 
-public class Controller{
+public class Controller {
 
     private Stage stage;
     private Scene scene;
@@ -23,7 +23,7 @@ public class Controller{
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 
@@ -35,7 +35,7 @@ public class Controller{
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 
@@ -47,7 +47,7 @@ public class Controller{
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 
@@ -59,7 +59,7 @@ public class Controller{
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 
@@ -71,7 +71,7 @@ public class Controller{
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 
@@ -83,7 +83,7 @@ public class Controller{
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 
@@ -95,7 +95,7 @@ public class Controller{
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 
@@ -107,7 +107,7 @@ public class Controller{
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 
@@ -119,7 +119,7 @@ public class Controller{
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 
@@ -131,7 +131,7 @@ public class Controller{
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 
@@ -143,11 +143,11 @@ public class Controller{
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 
-    public void exitApp(ActionEvent event) {
+    public void exitApp() {
         Platform.exit();
     }
 
