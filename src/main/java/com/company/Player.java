@@ -3,6 +3,7 @@ package com.company;
 public class Player implements Runnable {
     private static int index = 1;
     private final int id;
+    private String email;
     private String username;
     private int score;
     private boolean isAI;
@@ -14,6 +15,14 @@ public class Player implements Runnable {
         this.username = username;
         this.score = score;
         this.isAI = isAI;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public int getId() {
