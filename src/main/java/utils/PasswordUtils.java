@@ -38,10 +38,9 @@ public class PasswordUtils {
         }
     }
 
-    public static boolean verifyThePlainTextPassword(String inputPassword, String hashedPassword, String salt) {
+    public static boolean checkPassword(String inputPassword, String hashedPassword, String salt) {
         Optional<String> optEncrypted = generateHashedPassword(inputPassword, salt);
-        return optEncrypted.map(s -> s.equals(hashedPassword)).orElse(false);
-
+        return optEncrypted.toString().equals(hashedPassword);
     }
 
 }

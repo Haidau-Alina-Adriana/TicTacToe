@@ -5,6 +5,7 @@ import utils.EntityManagerUtils;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import java.util.List;
 
 public class UserRepository {
     public static EntityManager entityManager;
@@ -46,14 +47,13 @@ public class UserRepository {
         }
     }
 
-    public static int findByEmail(String email) {
+    public List<TictactoeUsersEntity> findByEmail(String email) {
         return entityManager.createNamedQuery("Users.findByEmail")
                 .setParameter("inputEmail", email)
-                .getResultList()
-                .size();
+                .getResultList();
     }
 
-    public static int findByUsername(String username) {
+    public int findByUsername(String username) {
         return entityManager.createNamedQuery("Users.findByUsername")
                 .setParameter("inputUsername", username)
                 .getResultList()
