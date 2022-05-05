@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #60966f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #60966f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SceneController">
     <children>
         <AnchorPane layoutX="65.0" layoutY="64.0" prefHeight="299.0" prefWidth="475.0" style="-fx-background-color: #ffffff;">
             <children>
-                <Button layoutX="137.0" layoutY="244.0" mnemonicParsing="false" onAction="#goToIntroScene" prefHeight="31.0" prefWidth="201.0" style="-fx-background-color: #b85454;" text="Back" textFill="WHITE">
+                <Button layoutX="137.0" layoutY="244.0" mnemonicParsing="false" onAction="#goToHomeScene" prefHeight="31.0" prefWidth="201.0" style="-fx-background-color: #b85454;" text="Back" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
