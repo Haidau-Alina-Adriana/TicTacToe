@@ -8,6 +8,11 @@ import java.util.Objects;
                 query = "select u from TictactoeUsersEntity u where u.email = :inputEmail"),
         @NamedQuery(name = "Users.findByUsername",
                 query = "select u from TictactoeUsersEntity u where u.username = :inputUsername"),
+        @NamedQuery(name = "Users.sortUsersByScore",
+                query = "select u from TictactoeUsersEntity u order by u.score desc"),
+        @NamedQuery(name = "Users.getNumberOfUsers",
+                query = "select u from TictactoeUsersEntity u order by u.id asc"),
+
 })
 
 @Entity

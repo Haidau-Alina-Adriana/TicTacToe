@@ -20,7 +20,6 @@ public class UserRepository {
         beginTransaction();
         entityManager.persist(entity);
         commitTransaction();
-//        System.out.println("Created successfully.");
     }
 
     protected void beginTransaction() {
@@ -47,6 +46,12 @@ public class UserRepository {
         }
     }
 
+    public static int getNumberOfUsersFromDatabase() {
+        return entityManager.createNamedQuery("Users.getNumberOfUsers")
+                .getResultList()
+                .size();
+    }
+
     public List<TictactoeUsersEntity> findByEmail(String email) {
         return entityManager.createNamedQuery("Users.findByEmail")
                 .setParameter("inputEmail", email)
@@ -60,25 +65,30 @@ public class UserRepository {
                 .size();
     }
 
-    public void deleteUser(TictactoeUsersEntity user){
+    public void deleteUser(TictactoeUsersEntity user) {
         beginTransaction();
         TictactoeUsersEntity findUser = entityManager.find(TictactoeUsersEntity.class, user.getId());
         entityManager.remove(findUser);
         commitTransaction();
     }
 
-    public void updateEmail(TictactoeUsersEntity user, String email){
+    public void updateEmail(TictactoeUsersEntity user, String email) {
         beginTransaction();
         TictactoeUsersEntity findUser = entityManager.find(TictactoeUsersEntity.class, user.getId());
         findUser.setEmail(email);
         commitTransaction();
     }
 
-    public void updateUsername(TictactoeUsersEntity user, String username){
+    public void updateUsername(TictactoeUsersEntity user, String username) {
         beginTransaction();
         TictactoeUsersEntity findUser = entityManager.find(TictactoeUsersEntity.class, user.getId());
         findUser.setUsername(username);
         commitTransaction();
+    }
+
+    public static List<TictactoeUsersEntity> getStatistics() {
+        return entityManager.createNamedQuery("Users.sortUsersByScore")
+                .getResultList();
     }
 
 }

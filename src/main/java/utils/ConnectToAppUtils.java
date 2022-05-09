@@ -2,12 +2,10 @@ package utils;
 
 import com.company.user.UserRepository;
 import jpa.entity.TictactoeUsersEntity;
-
 import java.util.List;
 import java.util.Optional;
 
 public class ConnectToAppUtils {
-    private static long index = 1;
 
     public static String createAccount(String username, String email, String password) {
         UserRepository newUserRepo = new UserRepository();
@@ -15,8 +13,7 @@ public class ConnectToAppUtils {
         if (!newUserRepo.findByEmail(email).isEmpty() || newUserRepo.findByUsername(username) != 0) {
             return "User already exists!";
         }
-        newUser.setId(index);
-        index++;
+        newUser.setId(UserRepository.getNumberOfUsersFromDatabase() + 1);
         newUser.setUsername(username);
         newUser.setEmail(email);
         Optional<String> salt = PasswordUtils.generateSalt(50);
