@@ -9,11 +9,6 @@
     <children>
         <AnchorPane layoutX="65.0" layoutY="79.0" prefHeight="284.0" prefWidth="471.0" style="-fx-background-color: #b6d4be;">
             <children>
-                <Button layoutX="135.0" layoutY="162.0" mnemonicParsing="false" onAction="#goToIntroScene" prefHeight="31.0" prefWidth="201.0" style="-fx-background-color: #b85454;" text="Logout" textFill="WHITE">
-                    <font>
-                        <Font name="System Bold" size="15.0" />
-                    </font>
-                </Button>
                 <Button layoutX="135.0" layoutY="216.0" mnemonicParsing="false" onAction="#goToIntroScene" prefHeight="31.0" prefWidth="201.0" style="-fx-background-color: CA0000;" text="Delete account" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="15.0" />
@@ -24,11 +19,16 @@
                         <Font name="System Bold" size="15.0" />
                     </font>
                 </Button>
-                <Button layoutX="135.0" layoutY="111.0" mnemonicParsing="false" onAction="#goToHomeScene" prefHeight="31.0" prefWidth="201.0" style="-fx-background-color: #FFFFFF;" text="Back">
+                <Button layoutX="135.0" layoutY="111.0" mnemonicParsing="false" onAction="#goToHomeScene" prefHeight="31.0" prefWidth="201.0" style="-fx-background-color: #FFFFFF;" text="Change email">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
                 </Button>
+            <Button layoutX="135.0" layoutY="158.0" mnemonicParsing="false" onAction="#goToHomeScene" prefHeight="31.0" prefWidth="201.0" style="-fx-background-color: #FFFFFF;" text="Back">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
             </children>
         </AnchorPane>
         <Label layoutX="243.0" layoutY="14.0" text="Settings" textFill="WHITE">

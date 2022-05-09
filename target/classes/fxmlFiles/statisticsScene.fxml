@@ -3,7 +3,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollBar?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -17,7 +16,7 @@
                     </font>
                 </Button>
             <ScrollBar layoutX="457.0" orientation="VERTICAL" prefHeight="229.0" prefWidth="18.0" />
-            <TextField prefHeight="229.0" prefWidth="457.0" />
+            <Label prefHeight="229.0" prefWidth="458.0" />
             </children>
         </AnchorPane>
         <Label layoutX="237.0" layoutY="14.0" text="Statistics" textFill="WHITE">

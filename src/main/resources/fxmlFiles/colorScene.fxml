@@ -6,11 +6,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #60966f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.IntroController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #60966f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PlayWithoutLoginController">
     <children>
         <AnchorPane layoutX="65.0" layoutY="79.0" prefHeight="284.0" prefWidth="471.0" style="-fx-background-color: #b6d4be;">
             <children>
-                <Button layoutX="135.0" layoutY="160.0" mnemonicParsing="false" onAction="#goToBoardAIScene" prefHeight="31.0" prefWidth="201.0" style="-fx-background-color: #FFFFFF;" text="Next">
+                <Button layoutX="135.0" layoutY="160.0" mnemonicParsing="false" onAction="#selectColor" prefHeight="31.0" prefWidth="201.0" style="-fx-background-color: #FFFFFF;" text="Next">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
@@ -21,7 +21,7 @@
                     </font>
                 </Button>
                 <Label layoutX="187.0" layoutY="32.0" text="Choose color:" />
-            <ColorPicker layoutX="132.0" layoutY="62.0" prefHeight="31.0" prefWidth="201.0" />
+            <ColorPicker fx:id="currentColor" layoutX="132.0" layoutY="64.0" prefHeight="31.0" prefWidth="201.0" style="-fx-background-color: #ffffff;" />
             </children>
         </AnchorPane>
         <Label layoutX="230.0" layoutY="14.0" text="TicTacToe" textFill="WHITE">

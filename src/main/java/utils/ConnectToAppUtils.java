@@ -35,6 +35,7 @@ public class ConnectToAppUtils {
         if (!PasswordUtils.checkPassword(password, user.get(0).getPassword(), user.get(0).getSalt())) {
             return "Wrong password";
         }
+        SessionUtils.setUser(user.get(0));
         return "Succes!";
     }
 }
