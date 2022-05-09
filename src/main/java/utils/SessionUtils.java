@@ -1,12 +1,11 @@
 package utils;
 
-import com.company.GameWithOnePlayer;
 import jpa.entity.TictactoeUsersEntity;
 
 public class SessionUtils {
     private static TictactoeUsersEntity user;
 
-    private static GameWithOnePlayer game;
+    private static GameWithOnePlayerUtils game;
 
     public static TictactoeUsersEntity getUser() {
         return user;
@@ -15,4 +14,9 @@ public class SessionUtils {
     public static void setUser(TictactoeUsersEntity user) {
         SessionUtils.user = user;
     }
+
+    public static void logout() {
+        user = null;
+    }
+
 }

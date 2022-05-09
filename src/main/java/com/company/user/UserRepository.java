@@ -60,13 +60,25 @@ public class UserRepository {
                 .size();
     }
 
-//    public static List<TictactoeUsersEntity> findByIdAndEmail(String name) {
-//        return entityManager.createNamedQuery("Continent.findByName")
-//                .setParameter("continentName", name)
-//                .getResultList();
-//    }
+    public void deleteUser(TictactoeUsersEntity user){
+        beginTransaction();
+        TictactoeUsersEntity findUser = entityManager.find(TictactoeUsersEntity.class, user.getId());
+        entityManager.remove(findUser);
+        commitTransaction();
+    }
 
-//    public static TictactoeUsersEntity loginUser(User user) {
-//
-//    }
+    public void updateEmail(TictactoeUsersEntity user, String email){
+        beginTransaction();
+        TictactoeUsersEntity findUser = entityManager.find(TictactoeUsersEntity.class, user.getId());
+        findUser.setEmail(email);
+        commitTransaction();
+    }
+
+    public void updateUsername(TictactoeUsersEntity user, String username){
+        beginTransaction();
+        TictactoeUsersEntity findUser = entityManager.find(TictactoeUsersEntity.class, user.getId());
+        findUser.setUsername(username);
+        commitTransaction();
+    }
+
 }

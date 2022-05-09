@@ -2,24 +2,25 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #60966f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.IntroController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #60966f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SettingsController">
     <children>
         <AnchorPane layoutX="65.0" layoutY="79.0" prefHeight="284.0" prefWidth="471.0" style="-fx-background-color: #b6d4be;">
             <children>
-                <Button layoutX="135.0" layoutY="216.0" mnemonicParsing="false" onAction="#goToIntroScene" prefHeight="31.0" prefWidth="201.0" style="-fx-background-color: CA0000;" text="Delete account" textFill="WHITE">
+                <Button layoutX="135.0" layoutY="216.0" mnemonicParsing="false" onAction="#deleteAccount" prefHeight="31.0" prefWidth="201.0" style="-fx-background-color: CA0000;" text="Delete account" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
                 </Button>
-                <Button layoutX="135.0" layoutY="64.0" mnemonicParsing="false" onAction="#goToHomeScene" prefHeight="31.0" prefWidth="201.0" style="-fx-background-color: #FFFFFF;" text="Change username">
+                <Button layoutX="135.0" layoutY="64.0" mnemonicParsing="false" onAction="#changeUsername" prefHeight="31.0" prefWidth="201.0" style="-fx-background-color: #FFFFFF;" text="Change username">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
                 </Button>
-                <Button layoutX="135.0" layoutY="111.0" mnemonicParsing="false" onAction="#goToHomeScene" prefHeight="31.0" prefWidth="201.0" style="-fx-background-color: #FFFFFF;" text="Change email">
+                <Button layoutX="135.0" layoutY="111.0" mnemonicParsing="false" onAction="#changeEmail" prefHeight="31.0" prefWidth="201.0" style="-fx-background-color: #FFFFFF;" text="Change email">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
@@ -29,6 +30,38 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
+            <AnchorPane fx:id="changeUsername" layoutX="59.0" layoutY="58.0" prefHeight="200.0" prefWidth="353.0" style="-fx-background-color: #ffffff;" visible="false">
+               <children>
+                  <TextField fx:id="usernameInfo" alignment="CENTER" layoutX="61.0" layoutY="60.0" prefHeight="31.0" prefWidth="232.0" />
+                  <Button fx:id="saveUsernameButton" layoutX="150.0" layoutY="112.0" mnemonicParsing="false" onAction="#saveUsernameChanges" style="-fx-background-color: #66ff66;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="messageUsername" alignment="CENTER" layoutY="19.0" prefHeight="21.0" prefWidth="355.0" text="Enter your informations:" />
+                  <Button fx:id="cancelUsernameButton" layoutX="144.0" layoutY="156.0" mnemonicParsing="false" onAction="#cancelUsernameChanges" style="-fx-background-color: #ff3333;" text="Cancel" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="changeEmail" layoutX="67.0" layoutY="58.0" prefHeight="200.0" prefWidth="353.0" style="-fx-background-color: #ffffff;" visible="false">
+               <children>
+                  <TextField fx:id="emailInfo" alignment="CENTER" layoutX="61.0" layoutY="60.0" onAction="#saveEmailChanges" prefHeight="31.0" prefWidth="232.0" />
+                  <Button fx:id="saveEmailButton" layoutX="150.0" layoutY="112.0" mnemonicParsing="false" onAction="#saveEmailChanges" style="-fx-background-color: #66ff66;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="messageEmail" alignment="CENTER" layoutY="18.0" prefHeight="21.0" prefWidth="355.0" text="Enter your informations:" />
+                  <Button fx:id="cancelEmailButton" layoutX="144.0" layoutY="156.0" mnemonicParsing="false" onAction="#cancelEmailChanges" style="-fx-background-color: #ff3333;" text="Cancel" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
             </children>
         </AnchorPane>
         <Label layoutX="243.0" layoutY="14.0" text="Settings" textFill="WHITE">

@@ -92,4 +92,16 @@ public class TictactoeUsersEntity {
     public int hashCode() {
         return Objects.hash(id, email, username, password, score, salt);
     }
+
+    @Override
+    public String toString() {
+        return "TictactoeUsersEntity{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", score=" + score +
+                ", salt='" + salt + '\'' +
+                '}';
+    }
 }

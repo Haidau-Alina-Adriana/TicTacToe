@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import utils.SessionUtils;
 
 
 public class IntroController {
@@ -149,6 +150,11 @@ public class IntroController {
 
     public void exitApp() {
         Platform.exit();
+    }
+
+    public void logout(ActionEvent event){
+        SessionUtils.logout();
+        goToIntroScene(event);
     }
 
 }

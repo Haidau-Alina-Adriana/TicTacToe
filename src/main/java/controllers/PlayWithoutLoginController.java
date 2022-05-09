@@ -1,6 +1,6 @@
 package controllers;
 
-import com.company.GameWithOnePlayer;
+import utils.GameWithOnePlayerUtils;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -33,7 +33,7 @@ public class PlayWithoutLoginController implements Initializable {
 
     public void drawGrid(Event event) {
         message.setText("Your turn!");
-        int n = GameWithOnePlayer.getNumberOfRows(), m = GameWithOnePlayer.getNumberOfColumns();
+        int n = GameWithOnePlayerUtils.getNumberOfRows(), m = GameWithOnePlayerUtils.getNumberOfColumns();
         gameGrid.setAlignment(Pos.CENTER);
         gameGrid.setPadding(new Insets(10,10,10,10));
 
@@ -49,7 +49,7 @@ public class PlayWithoutLoginController implements Initializable {
 
     public void selectEasyMode(ActionEvent event) {
         try {
-            GameWithOnePlayer.setDifficulty("easy");
+            GameWithOnePlayerUtils.setDifficulty("easy");
             goToChooseBoardSizeScene(event);
         } catch (Exception e) {
             e.printStackTrace();
@@ -58,7 +58,7 @@ public class PlayWithoutLoginController implements Initializable {
 
     public void selectMediumMode(ActionEvent event) {
         try {
-            GameWithOnePlayer.setDifficulty("medium");
+            GameWithOnePlayerUtils.setDifficulty("medium");
             goToChooseBoardSizeScene(event);
         } catch (Exception e) {
             e.printStackTrace();
@@ -67,7 +67,7 @@ public class PlayWithoutLoginController implements Initializable {
 
     public void selectHardMode(ActionEvent event) {
         try {
-            GameWithOnePlayer.setDifficulty("hard");
+            GameWithOnePlayerUtils.setDifficulty("hard");
             goToChooseBoardSizeScene(event);
         } catch (Exception e) {
             e.printStackTrace();
@@ -76,8 +76,8 @@ public class PlayWithoutLoginController implements Initializable {
 
     public void selectNumberOfRowsAndColumns(ActionEvent event) {
         try {
-            GameWithOnePlayer.setNumberOfRows(rowSpinner.getValue());
-            GameWithOnePlayer.setNumberOfColumns(columnSpinner.getValue());
+            GameWithOnePlayerUtils.setNumberOfRows(rowSpinner.getValue());
+            GameWithOnePlayerUtils.setNumberOfColumns(columnSpinner.getValue());
             goToChooseColorScene(event);
         } catch (Exception e) {
             e.printStackTrace();
@@ -95,7 +95,7 @@ public class PlayWithoutLoginController implements Initializable {
 
     public void selectColor(ActionEvent event) {
         try {
-            GameWithOnePlayer.setPlayerColor(currentColor.getValue());
+            GameWithOnePlayerUtils.setPlayerColor(currentColor.getValue());
             goToBoardAIScene(event);
         } catch (Exception e) {
             e.printStackTrace();

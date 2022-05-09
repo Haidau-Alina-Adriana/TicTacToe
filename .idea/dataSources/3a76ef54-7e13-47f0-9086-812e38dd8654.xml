@@ -57,9 +57,9 @@
     <schema id="17" parent="1" name="STUDENT">
       <ObjectId>48</ObjectId>
       <CreatedTimestamp>2021-03-08.12:23:15</CreatedTimestamp>
-      <ModifiedTimestamp>2022-05-05.13:13:32</ModifiedTimestamp>
+      <ModifiedTimestamp>2022-05-05.19:35:39</ModifiedTimestamp>
       <IntrospectionVersion>200820</IntrospectionVersion>
-      <IntrospectionTimestamp>2022-05-05.13:14:15</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2022-05-09.14:23:34</IntrospectionTimestamp>
       <Current>1</Current>
     </schema>
     <schema id="18" parent="1" name="SYS">
@@ -27975,21 +27975,21 @@
       <SequenceIdentity>1</SequenceIdentity>
     </sequence>
     <table id="4019" parent="17" name="CITIES">
-      <ObjectId>45061</ObjectId>
-      <CreatedTimestamp>2022-05-05.13:02:16</CreatedTimestamp>
-      <ModifiedTimestamp>2022-05-05.13:02:16</ModifiedTimestamp>
+      <ObjectId>45102</ObjectId>
+      <CreatedTimestamp>2022-05-05.19:35:39</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-05.19:35:39</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
     <table id="4020" parent="17" name="CONTINENTS">
-      <ObjectId>45059</ObjectId>
-      <CreatedTimestamp>2022-05-05.13:02:16</CreatedTimestamp>
-      <ModifiedTimestamp>2022-05-05.13:02:16</ModifiedTimestamp>
+      <ObjectId>45101</ObjectId>
+      <CreatedTimestamp>2022-05-05.19:35:39</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-05.19:35:39</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
     <table id="4021" parent="17" name="COUNTRIES">
-      <ObjectId>45057</ObjectId>
-      <CreatedTimestamp>2022-05-05.13:02:16</CreatedTimestamp>
-      <ModifiedTimestamp>2022-05-05.13:02:16</ModifiedTimestamp>
+      <ObjectId>45100</ObjectId>
+      <CreatedTimestamp>2022-05-05.19:35:39</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-05.19:35:39</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
     <table id="4022" parent="17" name="CURSURI">
@@ -28023,9 +28023,9 @@
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
     <table id="4027" parent="17" name="TICTACTOE_USERS">
-      <ObjectId>45067</ObjectId>
-      <CreatedTimestamp>2022-05-05.13:13:32</CreatedTimestamp>
-      <ModifiedTimestamp>2022-05-05.13:13:32</ModifiedTimestamp>
+      <ObjectId>45075</ObjectId>
+      <CreatedTimestamp>2022-05-05.16:44:37</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-05.16:44:37</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
     <table id="4028" parent="17" name="USERS">
@@ -28062,7 +28062,6 @@
     <column id="4032" parent="4019" name="ID">
       <Position>1</Position>
       <DataType>NUMBER(*)|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
     <column id="4033" parent="4019" name="COUNTRY">
       <Position>2</Position>
@@ -28071,7 +28070,6 @@
     <column id="4034" parent="4019" name="NAME">
       <Position>3</Position>
       <DataType>VARCHAR2(50 byte)|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
     <column id="4035" parent="4019" name="CAPITAL">
       <Position>4</Position>
@@ -28085,271 +28083,216 @@
       <Position>6</Position>
       <DataType>FLOAT(*)|0s</DataType>
     </column>
-    <index id="4038" parent="4019" name="SYS_C0011688">
-      <ObjectId>45062</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <CreatedTimestamp>2022-05-05.13:02:16</CreatedTimestamp>
-      <ModifiedTimestamp>2022-05-05.13:02:16</ModifiedTimestamp>
-      <TablespaceName>USERS</TablespaceName>
-      <ColNames>ID</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="4039" parent="4019" name="SYS_C0011688">
-      <NameSurrogate>1</NameSurrogate>
-      <ModifiedTimestamp>2022-05-05.13:02:16</ModifiedTimestamp>
-      <ColNames>ID</ColNames>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <UnderlyingIndexName>SYS_C0011688</UnderlyingIndexName>
-      <Primary>1</Primary>
-    </key>
-    <column id="4040" parent="4020" name="ID">
+    <column id="4038" parent="4020" name="ID">
       <Position>1</Position>
       <DataType>NUMBER(*)|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
-    <column id="4041" parent="4020" name="NAME">
+    <column id="4039" parent="4020" name="NAME">
       <Position>2</Position>
       <DataType>VARCHAR2(50 byte)|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
-    <index id="4042" parent="4020" name="SYS_C0011685">
-      <ObjectId>45060</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <CreatedTimestamp>2022-05-05.13:02:16</CreatedTimestamp>
-      <ModifiedTimestamp>2022-05-05.13:02:16</ModifiedTimestamp>
-      <TablespaceName>USERS</TablespaceName>
-      <ColNames>ID</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="4043" parent="4020" name="SYS_C0011685">
-      <NameSurrogate>1</NameSurrogate>
-      <ModifiedTimestamp>2022-05-05.13:02:16</ModifiedTimestamp>
-      <ColNames>ID</ColNames>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <UnderlyingIndexName>SYS_C0011685</UnderlyingIndexName>
-      <Primary>1</Primary>
-    </key>
-    <column id="4044" parent="4021" name="ID">
+    <column id="4040" parent="4021" name="ID">
       <Position>1</Position>
       <DataType>NUMBER(*)|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
-    <column id="4045" parent="4021" name="NAME">
+    <column id="4041" parent="4021" name="NAME">
       <Position>2</Position>
       <DataType>VARCHAR2(50 byte)|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
-    <column id="4046" parent="4021" name="CODE">
+    <column id="4042" parent="4021" name="CODE">
       <Position>3</Position>
       <DataType>NUMBER(*)|0s</DataType>
     </column>
-    <column id="4047" parent="4021" name="CONTINENT">
+    <column id="4043" parent="4021" name="CONTINENT">
       <Position>4</Position>
       <DataType>VARCHAR2(50 byte)|0s</DataType>
     </column>
-    <index id="4048" parent="4021" name="SYS_C0011682">
-      <ObjectId>45058</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <CreatedTimestamp>2022-05-05.13:02:16</CreatedTimestamp>
-      <ModifiedTimestamp>2022-05-05.13:02:16</ModifiedTimestamp>
-      <TablespaceName>USERS</TablespaceName>
-      <ColNames>ID</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="4049" parent="4021" name="SYS_C0011682">
-      <NameSurrogate>1</NameSurrogate>
-      <ModifiedTimestamp>2022-05-05.13:02:16</ModifiedTimestamp>
-      <ColNames>ID</ColNames>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <UnderlyingIndexName>SYS_C0011682</UnderlyingIndexName>
-      <Primary>1</Primary>
-    </key>
-    <column id="4050" parent="4022" name="ID_CURS">
+    <column id="4044" parent="4022" name="ID_CURS">
       <Position>1</Position>
       <DataType>CHAR(2 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="4051" parent="4022" name="TITLU_CURS">
+    <column id="4045" parent="4022" name="TITLU_CURS">
       <Position>2</Position>
       <DataType>VARCHAR2(15 byte)|0s</DataType>
     </column>
-    <column id="4052" parent="4022" name="AN">
+    <column id="4046" parent="4022" name="AN">
       <Position>3</Position>
       <DataType>NUMBER(1 digit)|0s</DataType>
     </column>
-    <column id="4053" parent="4022" name="SEMESTRU">
+    <column id="4047" parent="4022" name="SEMESTRU">
       <Position>4</Position>
       <DataType>NUMBER(1 digit)|0s</DataType>
     </column>
-    <column id="4054" parent="4022" name="CREDITE">
+    <column id="4048" parent="4022" name="CREDITE">
       <Position>5</Position>
       <DataType>NUMBER(2 digit)|0s</DataType>
     </column>
-    <column id="4055" parent="4023" name="ID_PROF">
+    <column id="4049" parent="4023" name="ID_PROF">
       <Position>1</Position>
       <DataType>CHAR(4 byte)|0s</DataType>
     </column>
-    <column id="4056" parent="4023" name="ID_CURS">
+    <column id="4050" parent="4023" name="ID_CURS">
       <Position>2</Position>
       <DataType>CHAR(4 byte)|0s</DataType>
     </column>
-    <column id="4057" parent="4024" name="NR_MATRICOL">
+    <column id="4051" parent="4024" name="NR_MATRICOL">
       <Position>1</Position>
       <DataType>CHAR(4 byte)|0s</DataType>
     </column>
-    <column id="4058" parent="4024" name="ID_CURS">
+    <column id="4052" parent="4024" name="ID_CURS">
       <Position>2</Position>
       <DataType>CHAR(2 byte)|0s</DataType>
     </column>
-    <column id="4059" parent="4024" name="VALOARE">
+    <column id="4053" parent="4024" name="VALOARE">
       <Position>3</Position>
       <DataType>NUMBER(2 digit)|0s</DataType>
     </column>
-    <column id="4060" parent="4024" name="DATA_NOTARE">
+    <column id="4054" parent="4024" name="DATA_NOTARE">
       <Position>4</Position>
       <DataType>DATE|0s</DataType>
     </column>
-    <column id="4061" parent="4025" name="ID_PROF">
+    <column id="4055" parent="4025" name="ID_PROF">
       <Position>1</Position>
       <DataType>CHAR(4 byte)|0s</DataType>
     </column>
-    <column id="4062" parent="4025" name="NUME">
+    <column id="4056" parent="4025" name="NUME">
       <Position>2</Position>
       <DataType>CHAR(10 byte)|0s</DataType>
     </column>
-    <column id="4063" parent="4025" name="PRENUME">
+    <column id="4057" parent="4025" name="PRENUME">
       <Position>3</Position>
       <DataType>CHAR(10 byte)|0s</DataType>
     </column>
-    <column id="4064" parent="4025" name="GRAD_DIDACTIC">
+    <column id="4058" parent="4025" name="GRAD_DIDACTIC">
       <Position>4</Position>
       <DataType>VARCHAR2(5 byte)|0s</DataType>
     </column>
-    <column id="4065" parent="4026" name="NR_MATRICOL">
+    <column id="4059" parent="4026" name="NR_MATRICOL">
       <Position>1</Position>
       <DataType>CHAR(4 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="4066" parent="4026" name="NUME">
+    <column id="4060" parent="4026" name="NUME">
       <Position>2</Position>
       <DataType>VARCHAR2(10 byte)|0s</DataType>
     </column>
-    <column id="4067" parent="4026" name="PRENUME">
+    <column id="4061" parent="4026" name="PRENUME">
       <Position>3</Position>
       <DataType>VARCHAR2(10 byte)|0s</DataType>
     </column>
-    <column id="4068" parent="4026" name="AN">
+    <column id="4062" parent="4026" name="AN">
       <Position>4</Position>
       <DataType>NUMBER(1 digit)|0s</DataType>
     </column>
-    <column id="4069" parent="4026" name="GRUPA">
+    <column id="4063" parent="4026" name="GRUPA">
       <Position>5</Position>
       <DataType>CHAR(2 byte)|0s</DataType>
     </column>
-    <column id="4070" parent="4026" name="BURSA">
+    <column id="4064" parent="4026" name="BURSA">
       <Position>6</Position>
       <DataType>NUMBER(6,2 digit)|0s</DataType>
     </column>
-    <column id="4071" parent="4026" name="DATA_NASTERE">
+    <column id="4065" parent="4026" name="DATA_NASTERE">
       <Position>7</Position>
       <DataType>DATE|0s</DataType>
     </column>
-    <column id="4072" parent="4027" name="ID">
+    <column id="4066" parent="4027" name="ID">
       <Position>1</Position>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="4073" parent="4027" name="EMAIL">
+    <column id="4067" parent="4027" name="EMAIL">
       <Position>2</Position>
       <DataType>VARCHAR2(50 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="4074" parent="4027" name="USERNAME">
+    <column id="4068" parent="4027" name="USERNAME">
       <Position>3</Position>
       <DataType>VARCHAR2(50 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="4075" parent="4027" name="PASSWORD">
+    <column id="4069" parent="4027" name="PASSWORD">
       <Position>4</Position>
-      <DataType>VARCHAR2(255 byte)|0s</DataType>
+      <DataType>VARCHAR2(1024 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="4076" parent="4027" name="SCORE">
+    <column id="4070" parent="4027" name="SCORE">
       <Position>5</Position>
       <DataType>NUMBER(*)|0s</DataType>
     </column>
-    <column id="4077" parent="4027" name="SALT">
+    <column id="4071" parent="4027" name="SALT">
       <Position>6</Position>
       <DataType>VARCHAR2(1024 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="4078" parent="4027" name="SYS_C0011702">
-      <ObjectId>45068</ObjectId>
+    <index id="4072" parent="4027" name="SYS_C0011718">
+      <ObjectId>45076</ObjectId>
       <NameSurrogate>1</NameSurrogate>
-      <CreatedTimestamp>2022-05-05.13:13:32</CreatedTimestamp>
-      <ModifiedTimestamp>2022-05-05.13:13:32</ModifiedTimestamp>
+      <CreatedTimestamp>2022-05-05.16:44:37</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-05.16:44:37</ModifiedTimestamp>
       <TablespaceName>USERS</TablespaceName>
       <ColNames>ID
 EMAIL</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="4079" parent="4027" name="USERS_EMAIL_KEY">
-      <ObjectId>45069</ObjectId>
-      <CreatedTimestamp>2022-05-05.13:13:32</CreatedTimestamp>
-      <ModifiedTimestamp>2022-05-05.13:13:32</ModifiedTimestamp>
+    <index id="4073" parent="4027" name="USERS_EMAIL_KEY">
+      <ObjectId>45077</ObjectId>
+      <CreatedTimestamp>2022-05-05.16:44:37</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-05.16:44:37</ModifiedTimestamp>
       <TablespaceName>USERS</TablespaceName>
       <ColNames>EMAIL</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="4080" parent="4027" name="USERS_USERNAME_KEY">
-      <ObjectId>45070</ObjectId>
-      <CreatedTimestamp>2022-05-05.13:13:32</CreatedTimestamp>
-      <ModifiedTimestamp>2022-05-05.13:13:32</ModifiedTimestamp>
+    <index id="4074" parent="4027" name="USERS_USERNAME_KEY">
+      <ObjectId>45078</ObjectId>
+      <CreatedTimestamp>2022-05-05.16:44:37</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-05.16:44:37</ModifiedTimestamp>
       <TablespaceName>USERS</TablespaceName>
       <ColNames>USERNAME</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="4081" parent="4027" name="SYS_C0011702">
+    <key id="4075" parent="4027" name="SYS_C0011718">
       <NameSurrogate>1</NameSurrogate>
-      <ModifiedTimestamp>2022-05-05.13:13:32</ModifiedTimestamp>
+      <ModifiedTimestamp>2022-05-05.16:44:37</ModifiedTimestamp>
       <ColNames>ID
 EMAIL</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
-      <UnderlyingIndexName>SYS_C0011702</UnderlyingIndexName>
+      <UnderlyingIndexName>SYS_C0011718</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="4082" parent="4027" name="USERS_EMAIL_KEY">
-      <ModifiedTimestamp>2022-05-05.13:13:32</ModifiedTimestamp>
+    <key id="4076" parent="4027" name="USERS_EMAIL_KEY">
+      <ModifiedTimestamp>2022-05-05.16:44:37</ModifiedTimestamp>
       <ColNames>EMAIL</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>USERS_EMAIL_KEY</UnderlyingIndexName>
     </key>
-    <key id="4083" parent="4027" name="USERS_USERNAME_KEY">
-      <ModifiedTimestamp>2022-05-05.13:13:32</ModifiedTimestamp>
+    <key id="4077" parent="4027" name="USERS_USERNAME_KEY">
+      <ModifiedTimestamp>2022-05-05.16:44:37</ModifiedTimestamp>
       <ColNames>USERNAME</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>USERS_USERNAME_KEY</UnderlyingIndexName>
     </key>
-    <column id="4084" parent="4028" name="ID">
+    <column id="4078" parent="4028" name="ID">
       <Position>1</Position>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="4085" parent="4028" name="USERNAME">
+    <column id="4079" parent="4028" name="USERNAME">
       <Position>2</Position>
       <DataType>VARCHAR2(20 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="4086" parent="4028" name="PASSWORD">
+    <column id="4080" parent="4028" name="PASSWORD">
       <Position>3</Position>
       <DataType>VARCHAR2(20 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="4087" parent="4028" name="SCORE">
+    <column id="4081" parent="4028" name="SCORE">
       <Position>4</Position>
       <DataType>NUMBER(*)|0s</DataType>
     </column>
-    <body id="4088" parent="4029" name="PERSOANAA">
+    <body id="4082" parent="4029" name="PERSOANAA">
       <ObjectId>27477</ObjectId>
       <SourceTextLength>397</SourceTextLength>
       <Errors>13:24:PLS-00201: identifier &apos;TEFEFON&apos; must be declared
@@ -28361,67 +28304,67 @@ EMAIL</ColNames>
       <CreatedTimestamp>2021-03-29.14:27:49</CreatedTimestamp>
       <ModifiedTimestamp>2021-03-29.14:29:10</ModifiedTimestamp>
     </body>
-    <object-attribute id="4089" parent="4029" name="CNP">
+    <object-attribute id="4083" parent="4029" name="CNP">
       <Position>1</Position>
       <DataType>NUMBER|0s</DataType>
     </object-attribute>
-    <object-attribute id="4090" parent="4029" name="NUME">
+    <object-attribute id="4084" parent="4029" name="NUME">
       <Position>2</Position>
       <DataType>VARCHAR2|0s</DataType>
     </object-attribute>
-    <object-attribute id="4091" parent="4029" name="PRENUME">
+    <object-attribute id="4085" parent="4029" name="PRENUME">
       <Position>3</Position>
       <DataType>VARCHAR2|0s</DataType>
     </object-attribute>
-    <object-attribute id="4092" parent="4029" name="TELEFON">
+    <object-attribute id="4086" parent="4029" name="TELEFON">
       <Position>4</Position>
       <DataType>NUMBER|0s</DataType>
     </object-attribute>
-    <object-attribute id="4093" parent="4029" name="EMAIL">
+    <object-attribute id="4087" parent="4029" name="EMAIL">
       <Position>5</Position>
       <DataType>VARCHAR2|0s</DataType>
     </object-attribute>
-    <routine id="4094" parent="4029" name="PERSOANAA">
+    <routine id="4088" parent="4029" name="PERSOANAA">
       <RoutineKind>function</RoutineKind>
     </routine>
-    <argument id="4095" parent="4030" name="P_TITLE">
+    <argument id="4089" parent="4030" name="P_TITLE">
       <Position>1</Position>
       <DataType>VARCHAR2|0s</DataType>
     </argument>
-    <argument id="4096" parent="4031">
+    <argument id="4090" parent="4031">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>VARCHAR2|0s</DataType>
     </argument>
-    <argument id="4097" parent="4031" name="PI_ID_STUDENT">
+    <argument id="4091" parent="4031" name="PI_ID_STUDENT">
       <Position>1</Position>
       <DataType>CHAR|0s</DataType>
     </argument>
-    <argument id="4098" parent="4094">
+    <argument id="4092" parent="4088">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>PERSOANAA|0cs</DataType>
     </argument>
-    <argument id="4099" parent="4094" name="SELF">
+    <argument id="4093" parent="4088" name="SELF">
       <Position>1</Position>
       <ArgumentDirection>M</ArgumentDirection>
       <DataType>PERSOANAA|0cs</DataType>
     </argument>
-    <argument id="4100" parent="4094" name="CNP">
+    <argument id="4094" parent="4088" name="CNP">
       <Position>2</Position>
       <DataType>NUMBER|0s</DataType>
     </argument>
-    <argument id="4101" parent="4094" name="NUME">
+    <argument id="4095" parent="4088" name="NUME">
       <Position>3</Position>
       <DataType>VARCHAR2|0s</DataType>
     </argument>
-    <argument id="4102" parent="4094" name="PRENUME">
+    <argument id="4096" parent="4088" name="PRENUME">
       <Position>4</Position>
       <DataType>VARCHAR2|0s</DataType>
     </argument>
-    <argument id="4103" parent="4094" name="TELEFON">
+    <argument id="4097" parent="4088" name="TELEFON">
       <Position>5</Position>
       <DataType>NUMBER|0s</DataType>
     </argument>
-    <argument id="4104" parent="4094" name="EMAIL">
+    <argument id="4098" parent="4088" name="EMAIL">
       <Position>6</Position>
       <DataType>VARCHAR2|0s</DataType>
     </argument>

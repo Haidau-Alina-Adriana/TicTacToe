@@ -1,14 +1,14 @@
-package com.company;
+package utils;
 
 import javafx.scene.paint.Color;
 
-public class GameWithOnePlayer {
+public class GameWithOnePlayerUtils {
     private static String difficulty;
     private static int numberOfRows = 3;
     private static int numberOfColumns = 3;
     private static Color playerColor;
 
-    public GameWithOnePlayer() {
+    public GameWithOnePlayerUtils() {
     }
 
     public static String getDifficulty() {
@@ -16,7 +16,7 @@ public class GameWithOnePlayer {
     }
 
     public static void setDifficulty(String difficulty) {
-        GameWithOnePlayer.difficulty = difficulty;
+        GameWithOnePlayerUtils.difficulty = difficulty;
     }
 
     public static int getNumberOfColumns() {
@@ -24,7 +24,7 @@ public class GameWithOnePlayer {
     }
 
     public static void setNumberOfColumns(int numberOfColumns) {
-        GameWithOnePlayer.numberOfColumns = numberOfColumns;
+        GameWithOnePlayerUtils.numberOfColumns = numberOfColumns;
     }
 
     public static int getNumberOfRows() {
@@ -32,7 +32,7 @@ public class GameWithOnePlayer {
     }
 
     public static void setNumberOfRows(int numberOfRows) {
-        GameWithOnePlayer.numberOfRows = numberOfRows;
+        GameWithOnePlayerUtils.numberOfRows = numberOfRows;
     }
 
     public static Color getPlayerColor() {
@@ -40,7 +40,7 @@ public class GameWithOnePlayer {
     }
 
     public static void setPlayerColor(Color playerColor) {
-        GameWithOnePlayer.playerColor = playerColor;
+        GameWithOnePlayerUtils.playerColor = playerColor;
     }
 
     @Override
