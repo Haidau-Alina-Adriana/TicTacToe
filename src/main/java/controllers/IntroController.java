@@ -88,18 +88,6 @@ public class IntroController {
         }
     }
 
-    public void goToChooseColorScene(ActionEvent event) {
-        try {
-            root = FXMLLoader.load(getClass().getResource("../fxmlFiles/colorScene.fxml"));
-            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     public void goToBoardScene(ActionEvent event) {
         try {
             root = FXMLLoader.load(getClass().getResource("../fxmlFiles/boardScene.fxml"));
