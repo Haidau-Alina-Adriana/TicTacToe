@@ -3,9 +3,10 @@ package controllers;
 import AIGame.CheckVictory;
 import AIGame.Game;
 import AIGame.Player;
+import javafx.event.EventHandler;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.text.Font;
+import javafx.scene.input.MouseEvent;
 import utils.AIGameUtils;
 import AIGame.Board;
 import javafx.event.ActionEvent;
@@ -23,7 +24,6 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 import java.net.URL;
-import java.util.Map;
 import java.util.ResourceBundle;
 
 public class PlayWithoutLoginController implements Initializable {
@@ -41,45 +41,21 @@ public class PlayWithoutLoginController implements Initializable {
 
     public void drawGrid(Event event) {
         startBtn.setDisable(true);
+        Board board = new Board();
 
-        message.setText("Player's " + AIGameUtils.turn % 2 + " turn!");
+        message.setText("Your turn");
         int n = AIGameUtils.getNumberOfRows();
         gameGrid.setAlignment(Pos.CENTER);
         gameGrid.setPadding(new Insets(10, 10, 10, 10));
 
-
-        Board board = new Board();
-        AIGameUtils.setBoard(board);
         for (int r = 0; r < n; r++) {
             for (int c = 0; c < n; c++) {
                 Button button = new Button();
+                button.setId(String.valueOf(r * n + c));
                 button.setMinWidth(30);
                 button.setMinHeight(30);
                 button.setOnAction(event1 -> {
-                    String resultMove = AIGameUtils.validateMove(button, AIGameUtils.turn % 2);
-                    if (resultMove.equals("ok")) {
-                        if (AIGameUtils.turn % 2 == 0) {
-                            ImageView img = new ImageView(image0);
-                            img.setFitWidth(20);
-                            img.setFitHeight(20);
-                            button.setGraphic(img);
-                        } else {
-                            ImageView img = new ImageView(imageX);
-                            img.setFitWidth(20);
-                            img.setFitHeight(20);
-                            button.setGraphic(img);
-                        }
-                        AIGameUtils.turn++;
-
-                        var checkForWinning = CheckVictory.checkWin(board.getGrid());
-                        if (checkForWinning != null) {
-                            message.setText("Player " + checkForWinning.getIndex() + " has won!");
-                        } else {
-                            message.setText("Player's " + AIGameUtils.turn % 2 + " turn!");
-                        }
-                    } else {
-                        message.setText(resultMove);
-                    }
+                    new Game().userMove(button);
                 });
                 gameGrid.add(button, c, r);
                 board.addPiece(button);
@@ -88,11 +64,6 @@ public class PlayWithoutLoginController implements Initializable {
         board.addPlayer(new Player(0));
         board.addPlayer(new Player(1));
         AIGameUtils.setBoard(board);
-        Game game = new Game();
-//        game.play();
-//
-//        new Thread(AIGameUtils.getBoard().getPlayers().get(0)).start();
-//        new Thread(AIGameUtils.getBoard().getPlayers().get(1)).start();
     }
 
     public void selectEasyMode(ActionEvent event) {
