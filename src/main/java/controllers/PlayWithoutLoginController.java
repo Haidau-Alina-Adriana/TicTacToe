@@ -34,9 +34,6 @@ public class PlayWithoutLoginController implements Initializable {
 
     public static Label accessMessageLabel;
 
-    private Image imageX = new Image(getClass().getResourceAsStream("../images/x.png"));
-    private Image image0 = new Image(getClass().getResourceAsStream("../images/zero.png"));
-
     public void drawGrid(Event event) {
         System.out.println(AIGameUtils.getNumberOfRows());
         startBtn.setDisable(true);
