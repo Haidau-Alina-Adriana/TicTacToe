@@ -24,7 +24,7 @@ import java.util.ResourceBundle;
 
 public class PlayWithoutLoginController implements Initializable {
     @FXML
-    public Label message;
+    private Label message;
     @FXML
     private GridPane gameGrid;
     @FXML
@@ -32,14 +32,17 @@ public class PlayWithoutLoginController implements Initializable {
     @FXML
     private Button startBtn;
 
+    public static Label accessMessageLabel;
+
     private Image imageX = new Image(getClass().getResourceAsStream("../images/x.png"));
     private Image image0 = new Image(getClass().getResourceAsStream("../images/zero.png"));
 
     public void drawGrid(Event event) {
+        System.out.println(AIGameUtils.getNumberOfRows());
         startBtn.setDisable(true);
         Board board = new Board();
 
-        message.setText("Your turn");
+        message.setText("Your turn!");
         int n = AIGameUtils.getNumberOfRows();
         gameGrid.setAlignment(Pos.CENTER);
         gameGrid.setPadding(new Insets(10, 10, 10, 10));
@@ -59,10 +62,6 @@ public class PlayWithoutLoginController implements Initializable {
         board.addPlayer(new Player(1));
         AIGameUtils.setBoard(board);
     }
-
-//    public void changeMessage(String resultMessage){
-//        message.setText(resultMessage);
-//    }
 
     public void selectEasyMode(ActionEvent event) {
         try {
@@ -102,7 +101,8 @@ public class PlayWithoutLoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        SpinnerValueFactory<Integer> valueForRows = new SpinnerValueFactory.IntegerSpinnerValueFactory(3, 8, 3);
+        accessMessageLabel = message;
+        SpinnerValueFactory<Integer> valueForRows = new SpinnerValueFactory.IntegerSpinnerValueFactory(3, 6, 3);
         rowSpinner.setValueFactory(valueForRows);
     }
 

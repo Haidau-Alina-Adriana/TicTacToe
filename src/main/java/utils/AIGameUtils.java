@@ -4,7 +4,9 @@ import AIGame.Board;
 import AIGame.Player;
 import javafx.scene.control.Button;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 public class AIGameUtils {
@@ -74,5 +76,17 @@ public class AIGameUtils {
 
     public static void setEndGame(boolean endGame) {
         AIGameUtils.endGame = endGame;
+    }
+
+    public static List<Integer> getFreeSpots(Map<Button, Player> board) {
+        List<Integer> freeSpots = new ArrayList<>();
+        int counter = 0;
+        for (int i = 0; i < AIGameUtils.getNumberOfRows() * AIGameUtils.getNumberOfRows(); i++) {
+            if (board.values().toArray()[counter] == null) {
+                freeSpots.add(counter);
+            }
+            counter++;
+        }
+        return freeSpots;
     }
 }
