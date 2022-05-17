@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import network.Server;
 import org.apache.commons.validator.routines.EmailValidator;
 import utils.ConnectToAppUtils;
 
@@ -45,6 +46,7 @@ public class LoginController {
 
     public void goToHomeScene(ActionEvent event) {
         try {
+            Server startServer = new Server();
             Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/homeScene.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);

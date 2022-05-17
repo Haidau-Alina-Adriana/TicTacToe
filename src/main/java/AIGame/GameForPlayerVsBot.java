@@ -5,11 +5,12 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import utils.AIGameUtils;
+import utils.CheckVictory;
 
 import java.util.List;
 import java.util.Random;
 
-public class Game {
+public class GameForPlayerVsBot {
     private Image imageX = new Image(getClass().getResourceAsStream("../images/ex.png"));
     private Image image0 = new Image(getClass().getResourceAsStream("../images/0.png"));
     private static boolean bestMoveTime = false;
@@ -37,11 +38,11 @@ public class Game {
 
                     if (AIGameUtils.getNumberOfFreePositions() != 0) {
                         if (AIGameUtils.getDifficulty().equals("hard")) {
-                            new Game().playHardMode(AIGameUtils.getBoard());
+                            new GameForPlayerVsBot().playHardMode(AIGameUtils.getBoard());
                         } else if (AIGameUtils.getDifficulty().equals("medium")) {
-                            new Game().playMediumMode(AIGameUtils.getBoard());
+                            new GameForPlayerVsBot().playMediumMode(AIGameUtils.getBoard());
                         } else {
-                            new Game().playEasyMode(AIGameUtils.getBoard());
+                            new GameForPlayerVsBot().playEasyMode(AIGameUtils.getBoard());
                         }
                     } else {
                         checkForWinning = CheckVictory.checkWin(AIGameUtils.getBoard().getGrid());

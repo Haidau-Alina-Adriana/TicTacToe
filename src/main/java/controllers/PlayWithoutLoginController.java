@@ -1,8 +1,7 @@
 package controllers;
 
-import AIGame.Game;
-import AIGame.Player;
-import javafx.scene.image.Image;
+import AIGame.GameForPlayerVsBot;
+import com.company.user.Player;
 import utils.AIGameUtils;
 import AIGame.Board;
 import javafx.event.ActionEvent;
@@ -50,7 +49,7 @@ public class PlayWithoutLoginController implements Initializable {
                 button.setId(String.valueOf(r * n + c));
                 button.setMinWidth(30);
                 button.setMinHeight(30);
-                button.setOnAction(event1 -> new Game().userMove(button));
+                button.setOnAction(event1 -> new GameForPlayerVsBot().userMove(button));
                 gameGrid.add(button, c, r);
                 board.addPiece(button);
             }

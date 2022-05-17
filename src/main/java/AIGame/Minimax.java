@@ -1,7 +1,9 @@
 package AIGame;
 
+import com.company.user.Player;
 import javafx.scene.control.Button;
 import utils.AIGameUtils;
+import utils.CheckVictory;
 
 import java.util.*;
 import java.util.stream.IntStream;

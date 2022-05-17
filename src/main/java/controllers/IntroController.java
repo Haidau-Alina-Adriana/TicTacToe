@@ -64,30 +64,6 @@ public class IntroController {
         }
     }
 
-    public void goToBoardAIScene(ActionEvent event) {
-        try {
-            root = FXMLLoader.load(getClass().getResource("../fxmlFiles/boardAIScene.fxml"));
-            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void goToChooseBoardSizeScene(ActionEvent event) {
-        try {
-            root = FXMLLoader.load(getClass().getResource("../fxmlFiles/boardSizeScene.fxml"));
-            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     public void goToBoardScene(ActionEvent event) {
         try {
             root = FXMLLoader.load(getClass().getResource("../fxmlFiles/boardScene.fxml"));

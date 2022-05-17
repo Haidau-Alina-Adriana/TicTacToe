@@ -29,6 +29,6 @@
                 <Font name="System Bold" size="30.0" />
             </font>
         </Label>
-      <Label alignment="CENTER" layoutY="108.0" prefHeight="21.0" prefWidth="600.0" text="Choose board size(between 3 and 10):" />
+      <Label alignment="CENTER" layoutY="108.0" prefHeight="21.0" prefWidth="600.0" text="Choose board size(between 3 and 6):" />
     </children>
 </AnchorPane>

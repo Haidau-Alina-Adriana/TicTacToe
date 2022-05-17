@@ -1,7 +1,7 @@
-package AIGame;
+package utils;
 
+import com.company.user.Player;
 import javafx.scene.control.Button;
-import utils.AIGameUtils;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

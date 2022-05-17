@@ -1,7 +1,7 @@
 package utils;
 
 import AIGame.Board;
-import AIGame.Player;
+import com.company.user.Player;
 import javafx.scene.control.Button;
 
 import java.util.ArrayList;
@@ -10,9 +10,9 @@ import java.util.List;
 import java.util.Map;
 
 public class AIGameUtils {
-    public static Board board;
+    private static Board board;
     public static int turn = 0;
-    public static boolean endGame = false;
+    private static boolean endGame = false;
 
     private static String difficulty;
     private static int numberOfRows = 3;
