@@ -29,6 +29,7 @@ public class Board {
         return grid;
     }
 
+
     public void setGrid(Map<Button, Player> grid) {
         this.grid = grid;
     }
@@ -42,7 +43,7 @@ public class Board {
     }
 
     public void addPiece(Button button) {
-       this.grid.put(button, null);
+        this.grid.put(button, null);
     }
 
     public void addPlayer(Player player){

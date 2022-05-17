@@ -4,6 +4,7 @@ import AIGame.Board;
 import AIGame.Player;
 import javafx.scene.control.Button;
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class AIGameUtils {
@@ -65,6 +66,10 @@ public class AIGameUtils {
 
     public static boolean isEndGame() {
         return endGame;
+    }
+
+    public static void initializeGrid(){
+        board.setGrid(new LinkedHashMap<>());
     }
 
     public static void setEndGame(boolean endGame) {

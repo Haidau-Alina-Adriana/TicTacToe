@@ -1,12 +1,8 @@
 package controllers;
 
-import AIGame.CheckVictory;
 import AIGame.Game;
 import AIGame.Player;
-import javafx.event.EventHandler;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import utils.AIGameUtils;
 import AIGame.Board;
 import javafx.event.ActionEvent;
@@ -28,7 +24,7 @@ import java.util.ResourceBundle;
 
 public class PlayWithoutLoginController implements Initializable {
     @FXML
-    private Label message;
+    public Label message;
     @FXML
     private GridPane gameGrid;
     @FXML
@@ -54,9 +50,7 @@ public class PlayWithoutLoginController implements Initializable {
                 button.setId(String.valueOf(r * n + c));
                 button.setMinWidth(30);
                 button.setMinHeight(30);
-                button.setOnAction(event1 -> {
-                    new Game().userMove(button);
-                });
+                button.setOnAction(event1 -> new Game().userMove(button));
                 gameGrid.add(button, c, r);
                 board.addPiece(button);
             }
@@ -65,6 +59,10 @@ public class PlayWithoutLoginController implements Initializable {
         board.addPlayer(new Player(1));
         AIGameUtils.setBoard(board);
     }
+
+//    public void changeMessage(String resultMessage){
+//        message.setText(resultMessage);
+//    }
 
     public void selectEasyMode(ActionEvent event) {
         try {
@@ -122,6 +120,8 @@ public class PlayWithoutLoginController implements Initializable {
 
     public void goToIntroScene(ActionEvent event) {
         try {
+            AIGameUtils.initializeGrid();
+            AIGameUtils.setEndGame(false);
             Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/introScene.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);

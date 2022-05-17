@@ -9,26 +9,24 @@ import java.util.stream.IntStream;
 
 public class Minimax {
     private int bestMove = 0;
-    private int c = 0;
 
     public int getBestMove(Map<Button, Player> board, Player player) {
         bestMove = 0;
-        minimax(board, player, true, 0);
+        minimax(board, player, true, 0, Integer.MIN_VALUE, Integer.MAX_VALUE);
         return bestMove;
     }
 
-    private int minimax(Map<Button, Player> board, Player player, boolean isAI, int depth) {
-        if (CheckVictory.checkWin(board) != null || getFreeSpots(board).size() == 0 || c == AIGameUtils.getNumberOfRows()*AIGameUtils.getNumberOfRows()) {
+    private int minimax(Map<Button, Player> board, Player player, boolean isAI, int depth, int alpha, int beta) {
+
+        if (CheckVictory.checkWin(board) != null || getFreeSpots(board).size() == 0) {
             return getScore(board, player, depth);
         }
-        c++;
 
         List<Integer> scores = new ArrayList<>();
         List<Integer> freeSpots = getFreeSpots(board);
         int score;
 
         for (int i = 0; i < freeSpots.size(); i++) {
-
             if (!isAI) {
                 depth++;
             }
@@ -39,10 +37,24 @@ public class Minimax {
             } else {
                 newPlayer = AIGameUtils.getBoard().getPlayers().get(0);
             }
-            updateBoard(board, i, newPlayer);
-            score = minimax(board, player, !isAI, depth);
+            updateBoard(board, freeSpots.get(i), newPlayer);
+            score = minimax(board, player, !isAI, depth, alpha, beta);
             scores.add(score);
-            updateBoard(board, i, null);
+            updateBoard(board, freeSpots.get(i), null);
+
+            if (isAI) {
+                int maxim = Math.max(Integer.MIN_VALUE, score);
+                alpha = Math.max(alpha, maxim);
+                if (alpha > beta) {
+                    return maxim;
+                }
+            } else {
+                int minim = Math.min(Integer.MAX_VALUE, score);
+                beta = Math.min(beta, minim);
+                if (alpha > beta) {
+                    return minim;
+                }
+            }
         }
 
         int scoreIndex;
