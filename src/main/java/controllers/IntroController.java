@@ -76,18 +76,6 @@ public class IntroController {
         }
     }
 
-    public void goToHomeScene(ActionEvent event) {
-        try {
-            root = FXMLLoader.load(getClass().getResource("../fxmlFiles/homeScene.fxml"));
-            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     public void goToStatisticsScene(ActionEvent event) {
         try {
             root = FXMLLoader.load(getClass().getResource("../fxmlFiles/statisticsScene.fxml"));

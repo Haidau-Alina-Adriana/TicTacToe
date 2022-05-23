@@ -46,7 +46,7 @@ public class LoginController {
 
     public void goToHomeScene(ActionEvent event) {
         try {
-            Server startServer = new Server();
+//            Server startServer = new Server();
             Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/homeScene.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);

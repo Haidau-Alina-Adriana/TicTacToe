@@ -67,7 +67,7 @@ public class PlayController implements Initializable{
         @Override
         public void initialize(URL url, ResourceBundle resourceBundle) {
             accessMessageLabel = message;
-            new Client();
+//            new Client();
         }
 
         public void goBack(ActionEvent event) {

@@ -16,10 +16,10 @@ public class ConnectToAppUtils {
         newUser.setId(UserRepository.getNumberOfUsersFromDatabase() + 1);
         newUser.setUsername(username);
         newUser.setEmail(email);
-        Optional<String> salt = PasswordUtils.generateSalt(50);
-        newUser.setPassword(PasswordUtils.generateHashedPassword(password, salt.toString()).toString());
+        String salt = PasswordUtils.generateSalt();
+        newUser.setPassword(PasswordUtils.generateHashedPassword(password, salt));
         newUser.setScore(0L);
-        newUser.setSalt(salt.toString());
+        newUser.setSalt(salt);
         newUserRepo.create(newUser);
         return "Account created!";
     }

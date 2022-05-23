@@ -34,7 +34,6 @@ public class PlayWithoutLoginController implements Initializable {
     public static Label accessMessageLabel;
 
     public void drawGrid(Event event) {
-        System.out.println(AIGameUtils.getNumberOfRows());
         startBtn.setDisable(true);
         Board board = new Board();
 
@@ -113,6 +112,15 @@ public class PlayWithoutLoginController implements Initializable {
             e.printStackTrace();
         }
     }
+
+    public void restartGame(ActionEvent event) {
+        AIGameUtils.initializeGrid();
+        AIGameUtils.setEndGame(false);
+        gameGrid.getChildren().clear();
+        drawGrid(event);
+
+    }
+
 
     public void goToIntroScene(ActionEvent event) {
         try {

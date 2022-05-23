@@ -29,9 +29,9 @@ public class Minimax {
         int score;
 
         for (int i = 0; i < freeSpots.size(); i++) {
-            if (!isAI) {
-                depth++;
-            }
+//            if (!isAI) {
+//                depth++;
+//            }
 
             Player newPlayer;
             if (isAI) {
@@ -41,6 +41,7 @@ public class Minimax {
             }
             updateBoard(board, freeSpots.get(i), newPlayer);
             score = minimax(board, player, !isAI, depth, alpha, beta);
+            depth++;
             scores.add(score);
             updateBoard(board, freeSpots.get(i), null);
 

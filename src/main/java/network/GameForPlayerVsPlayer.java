@@ -8,7 +8,7 @@ import utils.AIGameUtils;
 import utils.CheckVictory;
 
 public class GameForPlayerVsPlayer {
-    private Image imageX = new Image(getClass().getResourceAsStream("../images/ex.png"));
+    private Image imageX = new Image(getClass().getResourceAsStream("../images/x.png"));
     private Image image0 = new Image(getClass().getResourceAsStream("../images/0.png"));
 
     public void userMove(Button button) {

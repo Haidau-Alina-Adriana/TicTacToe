@@ -5,8 +5,6 @@ import jpa.entity.TictactoeUsersEntity;
 public class SessionUtils {
     private static TictactoeUsersEntity user;
 
-    private static AIGameUtils game;
-
     public static TictactoeUsersEntity getUser() {
         return user;
     }

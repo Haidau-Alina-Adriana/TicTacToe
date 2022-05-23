@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 public class AIGameUtils {
-    private static Board board;
+    private static Board board = new Board(new LinkedHashMap<>(), new ArrayList<>());
     public static int turn = 0;
     private static boolean endGame = false;
 
@@ -56,7 +56,6 @@ public class AIGameUtils {
     public static void setNumberOfRows(int numberOfRows) {
         AIGameUtils.numberOfRows = numberOfRows;
     }
-
 
     public static void setBoard(Board gameBoard) {
         board = gameBoard;
