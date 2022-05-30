@@ -3,7 +3,6 @@ package utils;
 import com.company.user.UserRepository;
 import jpa.entity.TictactoeUsersEntity;
 import java.util.List;
-import java.util.Optional;
 
 public class ConnectToAppUtils {
 

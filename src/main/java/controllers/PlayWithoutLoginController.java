@@ -116,9 +116,9 @@ public class PlayWithoutLoginController implements Initializable {
     public void restartGame(ActionEvent event) {
         AIGameUtils.initializeGrid();
         AIGameUtils.setEndGame(false);
+        AIGameUtils.turn = 0;
         gameGrid.getChildren().clear();
         drawGrid(event);
-
     }
 
 

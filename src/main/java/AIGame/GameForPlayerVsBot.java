@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Random;
 
 public class GameForPlayerVsBot {
-    private Image imageX = new Image(getClass().getResourceAsStream("../images/ex.png"));
+    private Image imageX = new Image(getClass().getResourceAsStream("../images/x.png"));
     private Image image0 = new Image(getClass().getResourceAsStream("../images/0.png"));
     private static boolean bestMoveTime = false;
 

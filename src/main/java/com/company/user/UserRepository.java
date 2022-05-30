@@ -86,6 +86,13 @@ public class UserRepository {
         commitTransaction();
     }
 
+    public void updateScore(long userID){
+        beginTransaction();
+        TictactoeUsersEntity findUser = entityManager.find(TictactoeUsersEntity.class, userID);
+        findUser.setScore(findUser.getScore() + 3);
+        commitTransaction();
+    }
+
     public static List<TictactoeUsersEntity> getStatistics() {
         return entityManager.createNamedQuery("Users.sortUsersByScore")
                 .getResultList();
