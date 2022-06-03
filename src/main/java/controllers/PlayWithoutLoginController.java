@@ -2,7 +2,7 @@ package controllers;
 
 import AIGame.GameForPlayerVsBot;
 import com.company.user.Player;
-import utils.AIGameUtils;
+import utils.GameUtils;
 import AIGame.Board;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -38,7 +38,7 @@ public class PlayWithoutLoginController implements Initializable {
         Board board = new Board();
 
         message.setText("Your turn!");
-        int n = AIGameUtils.getNumberOfRows();
+        int n = GameUtils.getNumberOfRows();
         gameGrid.setAlignment(Pos.CENTER);
         gameGrid.setPadding(new Insets(10, 10, 10, 10));
 
@@ -55,12 +55,12 @@ public class PlayWithoutLoginController implements Initializable {
         }
         board.addPlayer(new Player(0));
         board.addPlayer(new Player(1));
-        AIGameUtils.setBoard(board);
+        GameUtils.setBoard(board);
     }
 
     public void selectEasyMode(ActionEvent event) {
         try {
-            AIGameUtils.setDifficulty("easy");
+            GameUtils.setDifficulty("easy");
             goToChooseBoardSizeScene(event);
         } catch (Exception e) {
             e.printStackTrace();
@@ -69,7 +69,7 @@ public class PlayWithoutLoginController implements Initializable {
 
     public void selectMediumMode(ActionEvent event) {
         try {
-            AIGameUtils.setDifficulty("medium");
+            GameUtils.setDifficulty("medium");
             goToChooseBoardSizeScene(event);
         } catch (Exception e) {
             e.printStackTrace();
@@ -78,7 +78,7 @@ public class PlayWithoutLoginController implements Initializable {
 
     public void selectHardMode(ActionEvent event) {
         try {
-            AIGameUtils.setDifficulty("hard");
+            GameUtils.setDifficulty("hard");
             goToChooseBoardSizeScene(event);
         } catch (Exception e) {
             e.printStackTrace();
@@ -87,7 +87,7 @@ public class PlayWithoutLoginController implements Initializable {
 
     public void selectNumberOfRowsAndColumns(ActionEvent event) {
         try {
-            AIGameUtils.setNumberOfRows(rowSpinner.getValue());
+            GameUtils.setNumberOfRows(rowSpinner.getValue());
             goToBoardAIScene(event);
         } catch (Exception e) {
             e.printStackTrace();
@@ -114,18 +114,17 @@ public class PlayWithoutLoginController implements Initializable {
     }
 
     public void restartGame(ActionEvent event) {
-        AIGameUtils.initializeGrid();
-        AIGameUtils.setEndGame(false);
-        AIGameUtils.turn = 0;
+        GameUtils.initializeGrid();
+        GameUtils.setEndGame(false);
+        GameUtils.turn = 0;
         gameGrid.getChildren().clear();
         drawGrid(event);
     }
 
-
     public void goToIntroScene(ActionEvent event) {
         try {
-            AIGameUtils.initializeGrid();
-            AIGameUtils.setEndGame(false);
+            GameUtils.initializeGrid();
+            GameUtils.setEndGame(false);
             Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/introScene.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);

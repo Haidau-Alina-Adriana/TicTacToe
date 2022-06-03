@@ -10,9 +10,9 @@ public class CheckVictory {
 
     public static Player checkWin(Map<Button, Player> board) {
         Map<Button, Player> win = new LinkedHashMap<>();
-        for (int i = 0; i < AIGameUtils.getNumberOfRows() * AIGameUtils.getNumberOfRows(); i++) {
-            int column = i % AIGameUtils.getNumberOfRows();
-            int line = i / AIGameUtils.getNumberOfRows();
+        for (int i = 0; i < GameUtils.getNumberOfRows() * GameUtils.getNumberOfRows(); i++) {
+            int column = i % GameUtils.getNumberOfRows();
+            int line = i / GameUtils.getNumberOfRows();
 
             win = checkMatch(line, column, 1, 1, i, board); //diag principala
 
@@ -38,15 +38,15 @@ public class CheckVictory {
         Map<Button, Player> match = new LinkedHashMap<>();
         int type = -1;
         int count = 0;
-        while (count < AIGameUtils.getNumberOfRows() &&
-                index < AIGameUtils.getNumberOfRows() * AIGameUtils.getNumberOfRows() &&
-                line >= 0 && line <= AIGameUtils.getNumberOfRows() - 1 && column >= 0 && column <= AIGameUtils.getNumberOfRows() - 1) {
+        while (count < GameUtils.getNumberOfRows() &&
+                index < GameUtils.getNumberOfRows() * GameUtils.getNumberOfRows() &&
+                line >= 0 && line <= GameUtils.getNumberOfRows() - 1 && column >= 0 && column <= GameUtils.getNumberOfRows() - 1) {
             boolean found = false;
             Button button = null;
             Player player = null;
             int i = 0;
             for (Map.Entry<Button, Player> iterator : board.entrySet()) {
-                if (i == line * AIGameUtils.getNumberOfRows() + column) {
+                if (i == line * GameUtils.getNumberOfRows() + column) {
                     button = iterator.getKey();
                     player = iterator.getValue();
                     break;

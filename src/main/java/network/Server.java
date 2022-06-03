@@ -1,5 +1,8 @@
 package network;
 
+import AIGame.Board;
+import utils.GameUtils;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;

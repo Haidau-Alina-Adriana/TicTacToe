@@ -16,10 +16,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import network.Client;
 import network.GameForPlayerVsPlayer;
-import network.Server;
-import utils.AIGameUtils;
+import utils.GameUtils;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -37,7 +35,7 @@ public class PlayController implements Initializable{
         private static final int SIZE = 8;
 
         public void drawGrid(Event event) {
-            AIGameUtils.setNumberOfRows(SIZE);
+            GameUtils.setNumberOfRows(SIZE);
             startBtn.setDisable(true);
             Board board = new Board();
 
@@ -60,7 +58,7 @@ public class PlayController implements Initializable{
             }
             board.addPlayer(new Player(0));
             board.addPlayer(new Player(1));
-            AIGameUtils.setBoard(board);
+            GameUtils.setBoard(board);
 
         }
 
@@ -72,8 +70,8 @@ public class PlayController implements Initializable{
 
         public void goBack(ActionEvent event) {
             try {
-                AIGameUtils.initializeGrid();
-                AIGameUtils.setEndGame(false);
+                GameUtils.initializeGrid();
+                GameUtils.setEndGame(false);
                 Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/homeScene.fxml"));
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 Scene scene = new Scene(root);

@@ -2,7 +2,7 @@ package AIGame;
 
 import com.company.user.Player;
 import javafx.scene.control.Button;
-import utils.AIGameUtils;
+import utils.GameUtils;
 import utils.CheckVictory;
 
 import java.util.*;
@@ -29,19 +29,14 @@ public class Minimax {
         int score;
 
         for (int i = 0; i < freeSpots.size(); i++) {
-//            if (!isAI) {
-//                depth++;
-//            }
-
             Player newPlayer;
             if (isAI) {
                 newPlayer = player;
             } else {
-                newPlayer = AIGameUtils.getBoard().getPlayers().get(0);
+                newPlayer = GameUtils.getBoard().getPlayers().get(0);
             }
             updateBoard(board, freeSpots.get(i), newPlayer);
-            score = minimax(board, player, !isAI, depth, alpha, beta);
-            depth++;
+            score = minimax(board, player, !isAI, depth + 1, alpha, beta);
             scores.add(score);
             updateBoard(board, freeSpots.get(i), null);
 
@@ -100,15 +95,15 @@ public class Minimax {
             return 0;
         }
         if (winner.equals(player)) {
-            return AIGameUtils.getBoard().getGrid().size() - depth;
+            return GameUtils.getBoard().getGrid().size() - depth;
         }
-        return (AIGameUtils.getBoard().getGrid().size() * -1) + depth;
+        return (GameUtils.getBoard().getGrid().size() * -1) + depth;
     }
 
     private List<Integer> getFreeSpots(Map<Button, Player> board) {
         List<Integer> freeSpots = new ArrayList<>();
         int counter = 0;
-        for (int i = 0; i < AIGameUtils.getNumberOfRows() * AIGameUtils.getNumberOfRows(); i++) {
+        for (int i = 0; i < GameUtils.getNumberOfRows() * GameUtils.getNumberOfRows(); i++) {
             if (board.values().toArray()[counter] == null) {
                 freeSpots.add(counter);
             }

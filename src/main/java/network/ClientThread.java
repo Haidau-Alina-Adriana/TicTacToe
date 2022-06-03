@@ -9,6 +9,7 @@ import java.net.Socket;
 class ClientThread extends Thread {
     private final Socket socket;
 
+
     public ClientThread(Socket socket) {
         this.socket = socket;
     }
