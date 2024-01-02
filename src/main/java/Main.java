@@ -8,7 +8,6 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        //java -jar C:\Users\Asus\Documents\GitHub\TicTacToe\out\artifacts\TicTacToe_jar\TicTacToe.jar
         try {
             Parent root = FXMLLoader.load(getClass().getResource("fxmlFiles/introScene.fxml"));
             primaryStage.setTitle("TicTacToe");
